@@ -39,7 +39,7 @@ def get_covid_cases(url, countries, date):
     for row in reader:
         if row[0] == "FIPS":
             continue
-        if row[2] in countries:
+        if row[3] in countries:
             covid_cases.append({
                 "country": row[3],
                 "confirmed cases": row[7],
